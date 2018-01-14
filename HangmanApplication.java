@@ -30,6 +30,7 @@ public class HangmanApplication {
                 System.out.println();
                 System.out.println(game.drawPicture());
                 System.out.println();
+                System.out.println("Your previous guess was: "+ guess); //display previous guess
                 System.out.println(game.getFormalCurrentGuess());
                 //System.out.println(game.mysteryWord);
                 
@@ -54,7 +55,7 @@ public class HangmanApplication {
             
             // Play again or no?
             System.out.println();
-            System.out.println("Do you wanr to play another game? Enter Y if you do.");
+            System.out.println("Do you want to play another game? Enter Y if you do.");
             Character  response = (sc.next().toUpperCase()).charAt(0);
             doYouWantToPlay = (response == 'Y');
         }

@@ -68,7 +68,8 @@ public class Hangman {
      public boolean gameOver() {
          if (didWeWin()) {
              System.out.println();
-             System.out.println("Congrads! You won! You guessd the right word!");
+             System.out.println("Congrads! You won! You guessed the right word!");
+             System.out.println("Your mystery word was: "+ mysteryWord);
              return true;
          } else if (didWeLose()) {
              System.out.println();
