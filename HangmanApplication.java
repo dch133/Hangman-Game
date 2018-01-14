@@ -30,7 +30,6 @@ public class HangmanApplication {
                 System.out.println();
                 System.out.println(game.drawPicture());
                 System.out.println();
-                System.out.println("Your previous guess was: "+ guess); //display previous guess
                 System.out.println(game.getFormalCurrentGuess());
                 //System.out.println(game.mysteryWord);
                 
@@ -42,11 +41,13 @@ public class HangmanApplication {
                 // Check if the character is guessed already
                 while (game.isGuessedAlready(guess)) {
                     System.out.println("Try again! You've already guessed that character.");
+                    System.out.println("Your previous guess was: "+ guess); //display previous guess
                     guess = (sc.next().toLowerCase()).charAt(0);
                 }
                 // Play the guess
                 if (game.playGuess(guess)) {
                     System.out.println("Great guess! That character is in the word!");
+                    System.out.println("Your previous guess was: "+ guess); //display previous guess
                 } else {
                     System.out.println("Unfortunately that character isn't in the word");
                 }
